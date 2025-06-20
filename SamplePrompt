@@ -1,0 +1,163 @@
+I want to create a prompt for VS Code Claude 4 to create a sleek looking modern Notes App
+- React
+- Typescript
+- Express
+- SQL Server DB
+
+===========================================================================
+
+Notes App Development Prompt
+Please create a full-stack Notes application with the following specifications:
+Tech Stack Requirements
+
+Frontend: React with TypeScript
+Backend: Express.js with TypeScript
+Database: SQL Server
+Architecture: RESTful API
+
+Core Features to Implement
+Frontend (React + TypeScript)
+
+Main Dashboard
+
+Display all notes in a grid/list view
+Search functionality to filter notes
+Create new note button
+Sort options (date created, title, last modified)
+
+
+Note Editor
+
+Rich text editor or markdown support
+Auto-save functionality
+Title and content fields
+Tags/categories support
+Created/modified timestamps display
+
+
+Note Management
+
+Edit existing notes
+Delete notes with confirmation
+Archive/unarchive notes
+Favorite/unfavorite notes
+
+
+
+Backend (Express + TypeScript)
+
+API Endpoints
+GET /api/notes - Get all notes
+GET /api/notes/:id - Get specific note
+POST /api/notes - Create new note
+PUT /api/notes/:id - Update note
+DELETE /api/notes/:id - Delete note
+GET /api/notes/search?q=term - Search notes
+
+Data Validation
+
+Input validation middleware
+Error handling
+Request/response type definitions
+
+
+
+Database (SQL Server)
+
+Notes Table Schema
+sql- id (Primary Key, UUID/INT)
+- title (NVARCHAR)
+- content (NTEXT)
+- tags (NVARCHAR - JSON or comma-separated)
+- is_favorite (BIT)
+- is_archived (BIT)
+- created_at (DATETIME2)
+- updated_at (DATETIME2)
+
+Database Operations
+
+Connection setup with proper error handling
+CRUD operations with parameterized queries
+Full-text search capability
+
+
+
+Technical Requirements
+Project Structure
+notes-app/
+├── client/                 # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── types/
+│   │   └── utils/
+│   └── package.json
+├── server/                 # Express backend
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── types/
+│   └── package.json
+└── database/
+    └── schema.sql
+Additional Requirements
+
+TypeScript Configuration
+
+Strict type checking enabled
+Proper interface definitions for all data structures
+Type-safe API communication
+
+
+State Management
+
+Use React Context API or Redux Toolkit for global state
+Handle loading states and error states
+
+
+Styling
+
+Use CSS modules, styled-components, or Tailwind CSS
+Responsive design for mobile and desktop
+Clean, modern UI with good UX
+
+
+Error Handling
+
+Frontend: Toast notifications or error boundaries
+Backend: Proper HTTP status codes and error messages
+Database: Connection error handling and query error management
+
+
+Environment Configuration
+
+Environment variables for database connection
+Different configs for development/production
+CORS configuration
+
+
+
+Bonus Features (if time permits)
+
+Export notes to PDF or markdown
+Import notes from files
+Note sharing capabilities
+Real-time collaborative editing
+Dark/light theme toggle
+Keyboard shortcuts
+
+Deliverables Expected
+
+Complete source code for both frontend and backend
+Database schema and setup scripts
+Package.json files with all dependencies
+Basic documentation/README
+Environment variable examples
+TypeScript type definitions
+
+Please structure the code with clean architecture principles, proper error handling, and include comments for complex logic. Make sure all components are properly typed and the API follows RESTful conventions.
