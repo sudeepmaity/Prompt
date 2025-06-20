@@ -1,0 +1,78 @@
+# Copilot Instructions: Sleek Modern Notes App
+
+## Overview
+
+You are building a **modern, sleek Notes App** with the following stack:
+
+- **Frontend:** React (with TypeScript)
+- **Backend:** Express (TypeScript preferred)
+- **Database:** SQL Server
+
+## Design & UX
+
+- The UI must look **modern, minimal, and responsive**. Use a clean font (e.g., Inter, Roboto).
+- Notes are displayed in a card/grid layout on desktop, stacked on mobile.
+- Use a color palette with soft backgrounds, subtle shadows, and pleasing contrasts.
+- Support both **light and dark modes**.
+- Main features: Create, Edit, Delete, and View notes.
+- Each note has: title, content, creation date, last updated date.
+- Editing a note should use a modal or side panel.
+- Add a search bar to filter notes by title/content.
+- Show a loading spinner for async actions and empty states when no notes exist.
+- Use smooth transitions and subtle animations for actions.
+
+## Frontend
+
+- **React + TypeScript** (Vite or CRA).
+- Use React Router for navigation if needed.
+- Use a modern component library (e.g., MUI, Chakra UI, or build minimal custom components).
+- Use Axios or Fetch for API calls.
+- Form validation for note creation and editing.
+- Use React Context or Redux for state management if the app grows.
+- Write components with clear prop types/interfaces.
+- Organize code in `components/`, `pages/`, `hooks/`, `utils/` directories.
+
+## Backend
+
+- **Express** (TypeScript preferred).
+- RESTful API: `/api/notes`
+    - `GET /api/notes` – list all notes (with optional search)
+    - `GET /api/notes/:id` – get a single note
+    - `POST /api/notes` – create a new note
+    - `PUT /api/notes/:id` – update a note
+    - `DELETE /api/notes/:id` – delete a note
+- Validate incoming data and return proper error responses.
+- Use CORS middleware to allow frontend requests.
+- Organize code with routers, controllers, models.
+- Use dotenv for environment variables (DB connection, port, etc).
+- Log errors to console and return friendly error messages.
+
+## Database
+
+- **SQL Server** (MSSQL).
+- Table: `Notes`
+    - `id` (primary key, GUID or INT, auto-increment)
+    - `title` (varchar, not null)
+    - `content` (text, not null)
+    - `created_at` (datetime, defaults to now)
+    - `updated_at` (datetime, updated on edit)
+- Use an ORM (e.g., TypeORM, Sequelize) or direct query via `mssql` npm package.
+- Store DB credentials securely in environment variables.
+
+## Best Practices
+
+- TypeScript types/interfaces everywhere.
+- Modular, reusable code.
+- Use async/await for all async operations.
+- Secure API endpoints (for demo, no auth; for production, add JWT).
+- Document API endpoints (README or Swagger).
+- Include basic error/loading UI states.
+
+## Extras (optional)
+
+- PWA: Allow install to device.
+- Drag-and-drop note ordering.
+- Markdown support for note content.
+- Pin/favorite notes.
+
+---
